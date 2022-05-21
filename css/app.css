@@ -1,0 +1,314 @@
+:root {
+  --primary-color: #0a3871;
+  --darker-primary-color: #062d5c;
+  --secondary-color: #e55844;
+  --darker-brown: #3a3632;
+  --light-primary-color: #f3f5fc;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--light-primary-color);
+}
+
+header {
+  padding: 40px 84px;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.main-container {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 31px;
+  height: 48px;
+}
+
+.big-button,
+.small-button {
+  display: block;
+  font-family: "Inter", sans-serif;
+}
+
+.big-button {
+  width: 310px;
+  height: 110px;
+  border-radius: 24px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 18px;
+  margin-bottom: 38px;
+  transition: ease-in-out 0.5s;
+}
+
+.big-button:hover {
+  background-color: var(--darker-primary-color);
+}
+
+.small-button {
+  background-color: white;
+  border: 1px solid var(--primary-color);
+  width: 288px;
+  height: 67px;
+  color: var(--primary-color);
+  border-radius: 24px;
+  cursor: pointer;
+  margin: 0 auto;
+  font-size: 1em;
+  transition: 0.2s;
+}
+
+.small-button:hover {
+  background-color: var(--secondary-color);
+  border: none;
+  color: white;
+}
+
+.start-game-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-words-input {
+  margin-bottom: 397px;
+  display: block;
+  font-size: 2em;
+  outline: none;
+  border: none;
+  background-color: var(--light-primary-color);
+  color: var(--primary-color);
+  background-color: transparent;
+}
+
+.add-words-input:focus {
+  border: none;
+}
+
+.add-words-input::placeholder {
+  color: var(--primary-color);
+}
+
+.add-words-info {
+  color: #495057;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.add-words-info img {
+  margin-right: 8px;
+}
+
+.add-words-info p {
+  margin-right: 1em;
+}
+
+.add-words-buttons {
+  margin-top: 1em;
+}
+
+.game-hangman {
+  margin-bottom: 2em;
+}
+
+.game-board {
+  max-width: 1200px;
+  height: 600px;
+  text-align: center;
+}
+
+.game-guess-container {
+}
+
+.game-guess-results {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.game-wrong-results {
+  text-align: center;
+  font-size: 24px;
+}
+
+.game-container {
+  max-width: 1200px;
+}
+
+.letter-box {
+  width: 80px;
+  text-transform: uppercase;
+  padding-right: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+  font-size: 3em;
+}
+
+.space-box {
+  width: 80px;
+}
+
+.line {
+  background-image: url(../assets/img/line.png);
+  width: 80px;
+  height: 4px;
+  display: block;
+  margin-top: 1em;
+}
+
+.line-text {
+  line-height: 0px;
+  color: var(--primary-color);
+}
+
+.wrong-words-list {
+  display: inline-flex;
+}
+
+.wrong-words-list li {
+  padding: 0 12px;
+}
+
+.hide {
+  display: none;
+}
+
+.credits-info {
+  text-align: center;
+  color: var(--darker-brown);
+  padding: 3em;
+}
+
+.orange {
+  color: var(--secondary-color);
+}
+
+.blue {
+  color: #2595ee;
+}
+
+.red {
+  color: red;
+}
+
+.social {
+  margin-top: 1em;
+}
+
+.icon {
+  text-decoration: none;
+  color: var(--darker-primary-color);
+  padding: 5px;
+}
+
+.icon:visited {
+  color: var(--darker-primary-color);
+}
+
+/*BUTTONS*/
+
+.game-buttons {
+  text-align: center;
+  margin-top: 3em;
+}
+
+.dark {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+}
+
+.dark:hover {
+  background-color: var(--darker-primary-color);
+}
+
+.white {
+  background-color: white;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.white:hover {
+  background-color: var(--light-primary-color);
+}
+
+.standard-button {
+  width: 332px;
+  height: 67px;
+  border-radius: 24px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: 0.3s;
+  margin: 0 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .game-board {
+    width: 550px;
+    margin: 0 auto;
+  }
+
+  .game-board canvas {
+    width: 500px;
+    height: 500px;
+    padding-top: 65px;
+  }
+
+  .add-words-container {
+    padding: 0 40px;
+  }
+
+  .add-words-buttons {
+    text-align: center;
+  }
+
+  .add-words-buttons button {
+    margin-bottom: 1em;
+  }
+}
+
+@media screen and (max-width: 494px) {
+  .game-board {
+    width: 438px;
+    margin: 0 auto;
+  }
+
+  .game-board canvas {
+    width: 400px;
+    height: 400px;
+    padding-top: 126px;
+  }
+
+  .game-buttons button {
+    margin-bottom: 1em;
+  }
+
+  .game-guess-container {
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  .letter-box {
+    margin-top: 1em;
+  }
+}

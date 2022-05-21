@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/app.css" />
+    <title>Juego Ahorcado Alura</title>
+  </head>
+  <body>
+    <header>
+      <a href="" class="logo">
+        <img src="./assets/img/logo.png" alt="Logo de Alura" />
+      </a>
+    </header>
+    <main>
+      <div class="main-container">
+        <div class="start-game-container">
+          <button class="big-button dark" id="startGame">Iniciar Juego</button>
+          <button class="small-button" id="addWord">
+            Agregar nueva palabra
+          </button>
+        </div>
+        <div class="add-words-container hide">
+          <input
+            class="add-words-input"
+            name=""
+            id="inputWord"
+            maxlength="8"
+            placeholder="Ingrese una palabra"
+          ></textarea>
+          <div class="add-words-info">
+            <img src="./assets/img/info.png" alt="" /> 
+            <p>Máx. de 8 letras</p>
+          </div>
+          <div class="add-words-buttons">
+            <button class="standard-button dark" id="saveWord">
+              Guardar y empezar
+            </button>
+            <button class="standard-button white" id="cancelWord">
+              Cancelar
+            </button>
+          </div>
+        </div>
+        <div class="game-container hide">
+          <div class="game-hangman">
+            <div class="game-board">
+              <canvas width="600" height="600" id="boardHangman"></canvas>
+            </div>
+          </div>
+          <div class="game-guess-container">
+            <div class="game-guess-results"></div>
+            <div class="game-wrong-results">
+              <ul class="wrong-words-list"></ul>
+            </div>
+          </div>
+          <div class="game-buttons">
+            <button class="standard-button dark" id="newGame">
+              Nuevo Juego
+            </button>
+            <button class="standard-button white" id="endGame">Rendirse</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="credits-info">
+        <p>© 2022 - Carlos Olivares</p>
+        <p class="copyright">Hecho con <i class="red">&#10084;</i> en el programa ONE de <strong class="orange">Oracle</strong> y
+          <strong class="blue">Alura</strong>
+        </p>
+        <div class="social">
+          <a href="https://github.com/caryan57/" class="icon"
+            ><i class="fa-brands fa-github fa-2xl"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/charlyolicor/" class="icon"
+            ><i class="fa-brands fa-linkedin fa-2xl"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.14/dist/sweetalert2.all.min.js"></script>
+    <script src="./js/helpers.js"></script>
+    <script src="./js/validator.js"></script>
+    <script src="./js/createElements.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
