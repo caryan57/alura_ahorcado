@@ -42,6 +42,7 @@ function drawHangManCanvas(board, fn, x1, y1, x2 = 0, y2 = 0) {
 }
 
 async function play(url) {
-  const audio = await new Audio(url);
+  let audio = await new Audio(url);
+  audio.volume = 0.3;
   audio.play();
 }
